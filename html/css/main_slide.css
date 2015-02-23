@@ -1,0 +1,72 @@
+/******************* carousel ***********************/
+
+.carousel_auter {
+    padding: 0 10px;
+    clear: both;
+    position: relative;
+    overflow: hidden;
+    width: 970px;
+}
+.carousel_auter h2 {
+    border-bottom: 1px dotted #009900;
+    width: auto;
+    padding: 0 0 7px 0px;
+    margin: 40px 0 0 0;
+}
+#carousel {
+    padding-top: 30px;
+    margin: 0 5px;
+    z-index: 1;
+    left: 0;
+    overflow: hidden;
+    height: 89px;
+    border-bottom: 1px dotted #009900;
+}
+#carousel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#carousel li {
+    overflow: hidden;
+    float: left;
+    display: inline;
+    background: #FFF;
+}
+#carousel li a {
+    float: left;
+    overflow: hidden;
+}
+#carousel li a:hover img {
+    border-color: #CC91C0;
+}
+#carousel .but_left,
+#carousel .but_right {
+    left: 0px;
+    position: absolute;
+    z-index: 100;
+    border: 7px solid #FFF;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 2px;
+    cursor: pointer;
+    background: #FFF url(/img/carousel_str.png) 0 23px repeat-x;
+    width: 8px;
+    height: 60px;
+}
+#carousel .but_right {
+    right: 0px;
+    left: auto;
+    background-position: 8px 23px;
+    border-left-width: 7px;
+    border-right-width: 2px;
+}
+#carousel .but_left:hover {
+    background-position: 0 -77px;
+}
+#carousel .but_right:hover {
+    background-position: 8px -77px;
+}
+#carousel .about_system {}
+/****************************************************/
