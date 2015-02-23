@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Отсутствует текущая версия страницы!</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"></meta>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
+<link rel="stylesheet" type="text/css" href="/admin/css/style.css?1812579188"></link>
+<link rel="shortcut icon" href="/admin/favicon.ico"></link>
+
+<script type="text/javascript">
+// Хранит текущий путь
+cmslocation = '';
+
+// Запрос был отправлен
+sended_request = false;
+
+function saveLocation(location)
+{
+	cmslocation = location;
+}
+
+// Возвращает атрибут #cmsurl=
+function getCmsUrl()
+{
+	return new String(document.location.hash).replace('#cmsurl=', '').replace('%3F','?');
+}
+
+// Сохраняем текущий путь
+saveLocation(getCmsUrl());
+
+// При обновлении страницы указан анкор
+if(document.location.hash && document.location.hash.indexOf('cmsurl=') > -1)
+{
+	//document.location = unescape(getCmsUrl());
+	document.location = getCmsUrl();
+}
+
+// Устанавливает #
+function setLocation(location)
+{
+	if (location.indexOf('?') >= 0)
+	{
+		location = location.substring(0, location.indexOf('?'))
+		+ '%3F' + HostcmsEscape(location.substring(location.indexOf('?') + 1));
+	}
+	document.location.hash = 'cmsurl=' + location;
+}
+
+// Проверям изменение пути при назад-вперед
+function checkLocation()
+{
+	var curr_location = getCmsUrl();
+
+	if (curr_location != cmslocation && sended_request == false)
+	{
+		sended_request = true;
+		//document.location = curr_location;
+		cmsrequest = '';
+
+		//sendRequest(unescape(curr_location), 'get', callbackfunction_DoLoadAjax);
+		sendRequest(curr_location, 'get', callbackfunction_DoLoadAjax);
+	}
+}
+
+setInterval(checkLocation, 500);
+</script>
+
+<script type="text/javascript" src="/admin/js/codepress/codepress.js"></script>
+<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="/admin/css/ie_hacks.css" />
+<![endif]-->
+
+<script type="text/javascript" src="/admin/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/admin/js/JsHttpRequest.js"></script>
+<script type="text/javascript" src="/admin/js/jquery/jquery.elastic.js?1812579188"></script>
+<script type="text/javascript" src="/admin/js/tools/jquery.tools.js?1812579188"></script>
+<script type="text/javascript" src="/admin/wysiwyg/fm/fm.js?1812579188"></script>
+<script type="text/javascript" src="/admin/js/main.js?1812579188"></script>
+<script type="text/javascript" src="/admin/js/ajax.js?1812579188"></script>
+<script type="text/javascript" src="/admin/js/fieldcheck.js?1812579188"></script>
+<script type="text/javascript" src="/admin/js/lng/ru/ru.js?1812579188"></script>
+
+<!-- Calendar -->
+<link rel="stylesheet" type="text/css" media="all" href="/admin/calendar/calendar.css" title="win2k-cold-1" />
+<script type="text/javascript" src="/admin/calendar/calendar.js"></script>
+<script type="text/javascript" src="/admin/calendar/lang/calendar-ru.js"></script>
+<script type="text/javascript" src="/admin/calendar/calendar-setup.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	applyTooltip();
+	formatTable();
+	formatTextarea();
+	CreateWindow('copyright', '', '310', '80');
+	timeout_copiright = 0;
+});
+</script>
+
+<script type="text/javascript" src="/admin/wysiwyg/tiny_mce_gzip.js"></script>
+<script type="text/javascript">
+tinyMCE_GZ.init({
+	plugins : 'safari,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups',
+	themes : 'advanced',
+	languages : 'ru',
+	disk_cache : true,
+	compress : true,
+	suffix : '_src',
+	debug : false
+});
+</script>
+<script type="text/javascript">
+</script>
+
+</head>
+<body>
+<div id="header">
+<div class="left_box">
+
+<div class="logo"><a href="/admin/"
+><img
+	src="/admin/images/logo.gif" alt="(^) HostCMS"
+	title="HostCMS " /></a>
+</div>
+
+</div></div>
+</div>
+
+<div id="body"><!-- Левый блок -->
+<div class="left_box" id="body_left_box" style="margin-right: 0px; border-right: 0px">
+<div style="padding-right: 30px"><div id="id_content">
+		<div id="id_message"></div>
+		<h1>Отсутствует текущая версия страницы!</h1>
+		Внимание! Для страницы отсутствует текущая версия или с данным разделом не связана страница. Получить название страницы, связанной с данным разделом, можно в <b>"Раздел администрирования" &#8594; "Структура сайта"</b>. Выбрать текущую версию страницы можно в "Раздел администрирования" &#8594; "Страницы и документы".	</div></div>
+</div><div id="body_right_box" class="right_box"></div>
+
+</div>
+
+<div id="copyright" onmousemove="clear_timeout_copiright();"
+	onmouseout="set_timeout_copyright();" style="white-space: nowrap;">
+<div class="shadow_tail"><img src="/admin/images/shadow_tail.gif"></div>
+<strong>Система управления сайтом HostCMS v. 5</strong>
+<br />
+<br />
+Официальный сайт:  <a href="http://www.hostcms.ru" target="_blank">www.hostcms.ru</a>
+<br />
+Служба технической поддержки:  <a href="mailto:support@hostcms.ru">support@hostcms.ru</a>
+<br />
+Отдел продаж:  <a href="mailto:sales@hostcms.ru">sales@hostcms.ru</a>
+</div>
+
+<div id="footer">
+	<div>Copyright &copy; 2005&ndash;2011 <span onmousemove="ShowWindow('copyright'); copyright_position('copyright');" onmouseout="set_timeout_copyright();">ООО &laquo;Хостмэйк&raquo;</span></div>
+</div>
+
+<!--[if lte IE 6]>
+<script type="text/javascript" src="/admin/js/ie_resize.js"></script>
+<![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.acint.net	TRUE	/	FALSE	1999999999	aid	lPsLSFTqW3WLflzoBUUiAtwNSvICflf28uyLd8Q7GrpsfV6q
+.acint.net	TRUE	/	FALSE	1999999999	cSyncDp6	1424644982
+.acint.net	TRUE	/	FALSE	1999999999	cSyncDp9	1424644982
+.acint.net	TRUE	/	FALSE	1999999999	cSyncDp27	1424644982
+
