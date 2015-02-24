@@ -1,160 +1,5 @@
-<!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
+<?php get_header(); ?>
 
-    <!-- meta -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <!-- css + javascript -->
-    <?php wp_head(); ?>
-    <script id="facebook-jssdk" src="<?php echo get_template_directory_uri(); ?>/js/all.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
-
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.easyslider.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/js.js"></script>
-
-   
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-
-    <script>
-        !window.jQuery && document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.4.3.min.js"><\/script>');
-    </script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.fancybox-1.3.4.pack.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            /*
-             *   Examples - various
-             */
-
-            $("#various1").fancybox({
-                'titlePosition': 'inside',
-                'transitionIn': 'none',
-                'transitionOut': 'none'
-            });
-
-            $("#various2").fancybox();
-
-            $("#various3").fancybox({
-                'autoScale': false,
-                'transitionIn': 'none',
-                'transitionOut': 'none',
-                'type': 'iframe'
-            });
-
-            $("#various4").fancybox({
-                'padding': 0,
-                'autoScale': false,
-                'transitionIn': 'none',
-                'transitionOut': 'none',
-                'type': 'iframe',
-                'centerOnScroll': 'true',
-                'hideOnOverlayClick': 'true',
-                'height': 170,
-                'width': 495
-            });
-            $("#various5").fancybox({
-                'padding': 0,
-                'autoScale': false,
-                'transitionIn': 'none',
-                'transitionOut': 'none'
-            });
-        });
-    </script>
-</head>
-<body <?php body_class(); ?> oncopy="return false" hola-ext-player="1">
-    <script language="JavaScript">
-        <!--
-        var message = "";
-         ///////////////////////////////////
-        function clickIE() {
-            if (document.all) {
-                (message);
-                return false;
-            }
-        }
-
-        function clickNS(e) {
-            if (document.layers || (document.getElementById && !document.all)) {
-                if (e.which == 2 || e.which == 3) {
-                    (message);
-                    return false;
-                }
-            }
-        }
-        if (document.layers) {
-            document.captureEvents(Event.MOUSEDOWN);
-            document.onmousedown = clickNS;
-        } else {
-            document.onmouseup = clickNS;
-            document.oncontextmenu = clickIE;
-        }
-        document.oncontextmenu = new Function("return false")
-         // -->
-    </script>
-
-    <script language="Javascript">
-        document.ondragstart = test;
-        document.onselectstart = test;
-        document.ontextmenu = test;
-
-        function test() {
-            return false
-        }
-    </script>
-
-    <script language="JavaScript1.2">
-        function disableselect(e) {
-            return false
-        }
-
-        function reEnable() {
-            return true
-        }
-         //if IE4+
-        document.onselectstart = new Function("return false")
-         //if NS6
-         if (window.sidebar) {
-            document.onmousedown = disableselect
-            document.onclick = reEnable
-        }
-    </script>
- 
-    <table cellspacing="0" cellpadding="0" border="0" id="main">
-        <tbody>
-            <tr>
-                <td class="cont">
-                    <div id="header">
-                        <a href="./index_files/index.html">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" width="219" height="81" alt="Консалтинговая группа ТАКО" id="logo">
-                        </a>
-                        <div id="right_head">
-                            <span id="title"><p>Законодательство должно быть голосом разума, а&nbsp;судья&nbsp;– голосом закона.</p>Пифагор</span>  <span class="tel">+7 499 579-8008<br>+7 499 579-8007</span>
-                            <ul id="menu">
-                                <li><a href="http://www.takoconsult.ru/about/" title="О нас">О нас</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/services/" title="Услуги">Услуги</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/staff/" title="Команда">Команда</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/partners/" title="Отзывы">Отзывы</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/news/" title="Новости компании">Новости компании</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/novoe-zakonodatelstvo/" title="Лента новостей">Лента новостей</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/seminars/" title="Семинары">Семинары</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/dlja-smi/" title="Для СМИ">Для СМИ</a>
-                                </li>
-                                <li><a href="http://www.takoconsult.ru/contacts/" title="Контакты">Контакты</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                     <div id="content">
                         <div id="slider" style="width: 990px; height: 389px; overflow: hidden;">
                             <ul class="slides" style="width: 4950px; margin-left: -1980px;">
@@ -226,34 +71,34 @@
                                     rewSpeed: 180,
                                     hPics: [
 
-            "/img/logo/_rzd.png",
-            "/img/logo/_sis.png",
-            "/img/logo/_rostrans.png",
-            "/img/logo/_acetarget.png",
-            "/img/logo/_transresurs.png",
-            "/img/logo/_lokoil.png",
-            "/img/logo/_pegas.png",
-            "/img/logo/_eld.png",
-            "/img/logo/_vipproject.png",
-            "/img/logo/_jasmin.png",
-            "/img/logo/_altum.png",
-            "/img/logo/_promkluch.png",
-            "/img/logo/_domani.png",
-            "/img/logo/_invertor.png",
-            "/img/logo/_svat.png",
-            "/img/logo/_efpar.png",
-            "/img/logo/_lushdrug.png",
-            "/img/logo/_riston.png",
-            "/img/logo/_trian.png",
-            "/img/logo/_trans-m.png",
-            "/img/logo/_sy155.png",
-            "/img/logo/_zlatkombank.png"
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_rzd.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_sis.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_rostrans.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_acetarget.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_transresurs.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_lokoil.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_pegas.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_eld.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_vipproject.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_jasmin.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_altum.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_promkluch.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_domani.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_invertor.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_svat.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_efpar.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_lushdrug.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_riston.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_trian.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_trans-m.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_sy155.png",
+            "<?php echo get_template_directory_uri(); ?>/img/logo/_zlatkombank.png"
  ]
                                 });
                             });
                         </script>
 
-                        <div class="carousel_auter" onmousemove="$(\&#39;#carousel a\&#39;).lightBox(settings);">
+                        <div class="carousel_auter">
                             <h2>Наши партнеры:</h2>
                             <div id="carousel" style="visibility: visible;">
                                 <div class="but_left"></div>
@@ -620,6 +465,7 @@
                     </div>
                 </td>
             </tr>
+
             <tr>
                 <td class="footer">
                     <div id="footer">
@@ -628,8 +474,8 @@
                             <br><span style="font-size: 12px;"> Ведущая консалтинговая компания в Москве, занимающая лидирующее место в сфере консалтинговых услуг и уровню клиентского сервиса.</span>
                         </div>
                         <div id="foot_c">
-                            <div id="menu_bt"><a href="./index_files/index.html" rel="nofollow">Главная</a> / <a href="http://www.takoconsult.ru/about/" rel="nofollow" title="О компании">О компании</a> / <a href="http://www.takoconsult.ru/services/" title="Услуги">Услуги</a> / <a href="http://www.takoconsult.ru/articles/" title="Статьи">Статьи</a> / <a href="http://www.takoconsult.ru/news/" rel="nofollow" title="Новости">Новости</a>
-                            </div>
+                            <?php wpeFootNav(); ?>
+
                             <div id="sc">
                                 <a id="various4" href="http://www.takoconsult.ru/reiting/" rel="nofollow">
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/pravo_300.png" width="87" height="60" alt="" align="absmiddle">
@@ -638,6 +484,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/map.jpg" width="60" height="60" alt="" align="absmiddle"><span>посмотреть схему проезда</span>
                                 </a>
                             </div>
+
                         </div>
                         <div id="foot_r">
                             <!--noindex-->

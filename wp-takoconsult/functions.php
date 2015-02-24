@@ -186,7 +186,7 @@ function wpeHeadNav()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul class="headnav">%3$s</ul>',
+		'items_wrap'      => '<ul id="menu">%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
@@ -209,7 +209,7 @@ function wpeFootNav() {
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul class="footernav">%3$s</ul>',
+		'items_wrap'      => '<div id="menu_bt">%3$s</div>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
@@ -232,7 +232,7 @@ function wpeSideNav() {
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
+		'items_wrap'      => '<ul id="menumid">%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
