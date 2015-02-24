@@ -43,5 +43,11 @@
         </tbody>
     </table>
     <?php wp_footer(); ?>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/all.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.easyslider.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/js.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/scriptgal.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/share.js"></script>
 </body>
 </html>

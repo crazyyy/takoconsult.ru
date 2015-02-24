@@ -65,9 +65,6 @@ function wpeHeaderScripts()
 //  RU: Подключение скриптов в подвал (footer.php)
         wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', true); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
-        
-        wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true); // Custom scripts
-        wp_enqueue_script('wpeScripts'); // Enqueue it!
     }
 }
 
@@ -217,9 +214,32 @@ function wpeFootNav() {
 }
 // WPE sidebar navigation
 function wpeSideNav() {
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'sidebar-menu',
+        'menu'            => '', 
+        'container'       => 'div', 
+        'container_class' => 'menu-{menu slug}-container', 
+        'container_id'    => '',
+        'menu_class'      => 'menu', 
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul id="menumid">%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
+}
+// WPE sidebar navigation
+function wpeSideTwNav() {
 	wp_nav_menu(
 	array(
-		'theme_location'  => 'sidebar-menu',
+		'theme_location'  => 'sidebar-tw-menu',
 		'menu'            => '', 
 		'container'       => 'div', 
 		'container_class' => 'menu-{menu slug}-container', 
@@ -232,7 +252,7 @@ function wpeSideNav() {
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul id="menumid">%3$s</ul>',
+		'items_wrap'      => '<ul class="sidebar">%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
@@ -243,7 +263,8 @@ function wpeSideNav() {
 function register_html5_menu() {
     register_nav_menus(array( 
         'header-menu' => __('Меню в шапке', 'wpeasy'), 
-        'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'), 
+        'sidebar-menu' => __('Меню на главной под слайдер', 'wpeasy'), 
+        'sidebar-tw-menu' => __('Меню в сайдбар', 'wpeasy'), 
         'footer-menu' => __('Меню в подвал', 'wpeasy') 
     ));
 }

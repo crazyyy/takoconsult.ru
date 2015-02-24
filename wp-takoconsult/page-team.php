@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /* Template Name: Team Page Template */ get_header(); ?>
         <div id="content">
             <?php get_sidebar(); ?>
 

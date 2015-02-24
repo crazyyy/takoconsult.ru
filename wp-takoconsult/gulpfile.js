@@ -59,6 +59,7 @@ var changeEvent = function(evt) {
 
 gulp.task('css', function () {
     var sassFiles = gulp.src(appFiles.styles)
+        .pipe(plugins.sourcemaps.init()) 
         .pipe(plugins.sass({
             errLogToConsole:    true,
             outputStyle:        sassStyle
@@ -68,8 +69,9 @@ gulp.task('css', function () {
             gutil.beep();
         })
         .pipe(plugins.size({showFiles:true}))
-        .pipe(livereload())
-        .pipe(gulp.dest(paths.styles.dest));
+        .pipe(plugins.sourcemaps.write())
+        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(livereload());
 });
 
 gulp.task('style', function () {
