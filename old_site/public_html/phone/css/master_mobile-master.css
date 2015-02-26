@@ -1,0 +1,45 @@
+#u2063
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u2065
+{
+	border-color: #000000;
+	background: #FFFFFF url("../../images/nav-fill.gif") repeat-x left top;
+}
+
+#u2066
+{
+	border-color: #000000;
+	background-color: #000000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	position: relative;
+}
+
+#u2068-4
+{
+	background-color: transparent;
+	font-size: 24px;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: open-sans, sans-serif;
+	font-weight: 800;
+	position: relative;
+}
+
+#u2069-4
+{
+	background-color: transparent;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: open-sans, sans-serif;
+	font-weight: 400;
+	position: relative;
+}
+
